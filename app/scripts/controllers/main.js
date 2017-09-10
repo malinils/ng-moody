@@ -7,11 +7,19 @@
  * # MainCtrl
  * Controller of the myMoodAppApp
  */
-angular.module('myMoodAppApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('myMoodApp')
+  .controller('MainCtrl', function (moodSvc) {
+    var main = this;
+    main.name = 'Malin';
+    main.myMoodScale = [1,2,3,4,5];
+    main.todayMood = null;
+    main.moodStory = [];
+
+    main.setMood = function(value){
+    	if(value){
+    		moodSvc.createNewMood(value);
+    		main.todayMood = value;
+    		main.moodStory = moodSvc.savedMoods;
+    	}
+    };
   });

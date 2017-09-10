@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('myMoodAppApp', [
+  .module('myMoodApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('');
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

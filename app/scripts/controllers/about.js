@@ -7,7 +7,7 @@
  * # AboutCtrl
  * Controller of the myMoodAppApp
  */
-angular.module('myMoodAppApp')
+angular.module('myMoodApp')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
