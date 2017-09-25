@@ -12,9 +12,9 @@ angular.module('myMoodApp')
   	var that = this;
     // AngularJS will instantiate a singleton by calling "new" on this function
     that.savedMoods = [];
-    that.createNewMood = function(value){
-    	if(value){
-			var newMood = new Mood(value, Date.now());
+    that.createNewMood = function(value, date){
+    	if(value && date){
+			var newMood = new Mood(value, date);
 			that.savedMoods.push(newMood);
 		}
     };

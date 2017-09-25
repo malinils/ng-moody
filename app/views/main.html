@@ -3,6 +3,26 @@
 </div>
 
 <div class="row">
+  <div class="input-group"
+       moment-picker="main.pickerInput"
+       format="LLLL"
+       min-view="year"
+       max-view="month"
+       start-view="month"
+       today="true"
+       max-date="main.todayDate"
+       start-date="main.todayDate">
+      <span class="input-group-addon">
+          <i class="octicon octicon-calendar"></i>
+      </span>
+      <input class="form-control"
+             placeholder="Select a date"
+             ng-model="main.pickerInput"
+             ng-model-options="{ updateOn: 'blur'}">
+  </div>
+</div>
+
+<div class="row">
   <ul class="moodScaleList" ng-repeat="grade in main.myMoodScale">
     <li class="moodGrade listItem">
       <button ng-click="main.setMood(grade)" >{{grade}}</button> 

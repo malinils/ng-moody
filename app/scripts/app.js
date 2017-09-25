@@ -18,7 +18,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'chart.js'
+    'chart.js',
+    'moment-picker'
   ])
   .config(function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('');
@@ -40,5 +41,5 @@ angular
       })
       .otherwise({
         redirectTo: '/'
-      });
+      })
   });

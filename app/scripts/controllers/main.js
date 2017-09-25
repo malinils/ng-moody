@@ -14,10 +14,12 @@ angular.module('myMoodApp')
     main.myMoodScale = [1,2,3,4,5];
     main.todayMood = null;
     main.moodStory = [];
+    main.pickerInput = moment();
+    main.todayDate = moment();
 
     main.setMood = function(value){
     	if(value){
-    		moodSvc.createNewMood(value);
+    		moodSvc.createNewMood(value, main.pickerInput );
     		main.todayMood = value;
     		main.moodStory = moodSvc.savedMoods;
     	}
