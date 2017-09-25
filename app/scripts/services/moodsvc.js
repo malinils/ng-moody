@@ -19,9 +19,9 @@ angular.module('myMoodApp')
 		}
     };
 
-    var Mood = function(value, timestamp){
+    var Mood = function(value, date){
     	this.value = value;
-    	this.date = new Date(timestamp);
+    	this.date = date;
     	this.get = function(){
     		return {value: this.value, date: this.date};
     	};
